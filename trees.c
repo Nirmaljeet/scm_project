@@ -28,7 +28,19 @@ struct node* newNode(int data)
   "bottom-up" postorder traversal. */
 void printPostorder(struct node* node)
 {
-//prakhar will add here 
+//added by prakhar
+if (node == NULL)
+        return;
+ 
+     // first recur on left subtree
+     printPostorder(node->left);
+ 
+     // then recur on right subtree
+     printPostorder(node->right);
+ 
+     // now deal with the node
+     printf("%d ", node->data);
+
 }
  
 /* Given a binary tree, print its nodes in inorder*/
