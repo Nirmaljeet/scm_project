@@ -34,7 +34,15 @@ void printPostorder(struct node* node)
 /* Given a binary tree, print its nodes in inorder*/
 void printInorder(struct node* node)
 {
-//prajjwal will add here
+//Commit done by Prajjawal
+if (node == NULL)
+return;
+/* first recur on left child */
+printInorder(node->left);
+/* then print the data of node */
+printf("%d ", node->data);
+/* now recur on right child */
+printInorder(node->right);
 }
  
 /* Given a binary tree, print its nodes in preorder*/
@@ -54,7 +62,7 @@ int main()
  
      printf("\nPreorder traversal of binary tree is \n");
      printPreorder(root);
- 
+ //INORDER TRAVERSAL//
      printf("\nInorder traversal of binary tree is \n");
      printInorder(root);  
  
