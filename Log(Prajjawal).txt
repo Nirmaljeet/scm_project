@@ -1,0 +1,120 @@
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop
+$ git clone "https://github.com/Nirmaljeet/scm_project.git"
+fatal: destination path 'scm_project' already exists and is not an empty directory.
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop
+$ git clone "https://github.com/Nirmaljeet/scm_project.git"
+Cloning into 'scm_project'...
+remote: Counting objects: 10, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 10 (delta 2), reused 10 (delta 2), pack-reused 0
+Unpacking objects: 100% (10/10), done.
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop
+$ ls
+ 6_feb_2018/                                              Basic-Programs/         'Internet Download Manager.lnk'*   myproject/          repo/
+'Adobe Acrobat XI'/                                       CodeBlocks.lnk*          Mathematics/                      NetSpot.appref-ms   repo_27th_march/
+'Adobe Acrobat XI Pro 11.0.20 + Crack [Tech-Tools.ME]'/   DataStructuresProject/   MD7_Assgn_Banati_Prajjawal.pptx   project/            repo_2april/
+ ads_assignment_20th_Feb/                                 DBMS_lab/               'Microsoft Edge.lnk'*              project02April/     scm_project/
+ ads_lab/                                                 desktop.ini             'MinGW Installer.lnk'*             queue/             'This PC.lnk'*
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop
+$ cd scm_project/
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/scm_project (master)
+$ ls
+contributer.txt  nishkarsh/  prakhar/  trees.c
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/scm_project (master)
+$ git branch inorder
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/scm_project (master)
+$ git checkout inorder
+Switched to branch 'inorder'
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/scm_project (inorder)
+$ nano trees.c
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/scm_project (inorder)
+$ git status
+On branch inorder
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   trees.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/scm_project (inorder)
+$ git diff
+diff --git a/trees.c b/trees.c
+index bf21c8b..df6dfe4 100644
+--- a/trees.c
++++ b/trees.c
+@@ -34,7 +34,15 @@ void printPostorder(struct node* node)
+ /* Given a binary tree, print its nodes in inorder*/
+ void printInorder(struct node* node)
+ {
+-//prajjwal will add here
++//Commit done by Prajjawal
++if (node == NULL)
++return;
++/* first recur on left child */
++printInorder(node->left);
++/* then print the data of node */
++printf("%d ", node->data);
++/* now recur on right child */
++printInorder(node->right);
+ }
+
+ /* Given a binary tree, print its nodes in preorder*/
+@@ -54,7 +62,7 @@ int main()
+
+      printf("\nPreorder traversal of binary tree is \n");
+      printPreorder(root);
+-
++ //INORDER TRAVERSAL//
+      printf("\nInorder traversal of binary tree is \n");
+      printInorder(root);
+
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/scm_project (inorder)
+$ git status
+On branch inorder
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   trees.c
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Commit_(2)_Prajjawal.png
+        Inorder_Funtion_Working.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/scm_project (inorder)
+$ git add .
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/scm_project (inorder)
+$ git commit -a -m "Added Funtion In-Order and screenshots of git diff and working of the program added (All changes are done in inorder branch)"
+[inorder 023ce01] Added Funtion In-Order and screenshots of git diff and working of the program added (All changes are done in inorder branch)
+ 3 files changed, 10 insertions(+), 2 deletions(-)
+ create mode 100644 Commit_(2)_Prajjawal.png
+ create mode 100644 Inorder_Funtion_Working.png
+
+Prajjawal Banati@DESKTOP-93D799U MINGW64 ~/Desktop/scm_project (inorder)
+$ git push -u origin inorder
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 52.91 KiB | 6.61 MiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Nirmaljeet/scm_project.git
+   ac42134..023ce01  inorder -> inorder
+Branch 'inorder' set up to track remote branch 'inorder' from 'origin'.
+
