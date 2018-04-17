@@ -40,8 +40,19 @@ void printInorder(struct node* node)
 /* Given a binary tree, print its nodes in preorder*/
 void printPreorder(struct node* node)
 {
-//nishkarsh will add here
+     if (node == NULL)
+          return;
+ 
+     /* first print data of node */
+     printf("%d ", node->data);  
+ 
+     /* then recur on left sutree */
+     printPreorder(node->left);  
+ 
+     /* now recur on right subtree */
+     printPreorder(node->right);
 }    
+
  
 /* Driver program to test above functions*/
 int main()
