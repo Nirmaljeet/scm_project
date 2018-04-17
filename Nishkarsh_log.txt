@@ -1,0 +1,198 @@
+
+500060720@upes-500060720 MINGW64 ~
+$ cd F:
+
+500060720@upes-500060720 MINGW64 /f
+$ git clonehttps://github.com/Nirmaljeet/scm_project.git
+      3 [sig] bash 5360! sigpacket::process: Suppressing signal 18 to win32 process (pid 15068)
+git: 'clonehttps://github.com/Nirmaljeet/scm_project.git' is not a git command. See 'git --help'.
+
+500060720@upes-500060720 MINGW64 /f
+$ git clone "https://github.com/Nirmaljeet/scm_project.git"
+fatal: destination path 'scm_project' already exists and is not an empty directory.
+
+500060720@upes-500060720 MINGW64 /f
+$ ls
+'$RECYCLE.BIN'/   Balor/       collab/                 'F Drive Old'/   GitBranchLab/   msdia80.dll*   PROJECT/          SCM_PROJECT/
+ ADS_Labs/        BalorClub/   DataStructuresProject/   Git123/         GitLab/         myproject/     project02April/  'System Volume Information'/
+ balo111/         BlogBB/      diff_reset/              GitBranch/      Hollywood/      PDS_Labs/      project1/
+
+500060720@upes-500060720 MINGW64 /f
+$ mkdir nirmaljeet_project
+
+500060720@upes-500060720 MINGW64 /f
+$ cd nirmaljeet_project/
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project
+$ git clone "https://github.com/Nirmaljeet/scm_project.git"
+Cloning into 'scm_project'...
+remote: Counting objects: 18, done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 18 (delta 5), reused 17 (delta 4), pack-reused 0
+Unpacking objects: 100% (18/18), done.
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project
+$ ls
+scm_project/
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project
+$ cd scm_project/
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (master)
+$ ls
+contributer.txt  nishkarsh/  prakhar/  trees.c
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (master)
+$ cat contributer.txt
+Hello everyone My name is Prakhar. I have designed a project on tree
+implementation in c. Using git I have merged and committed the changes
+to the program. My contributors in this project are:
+-------------
+1. Nishkarsh
+-------------
+2. Prajjwal
+-------------
+3.prakhar
+-------------
+Please both of them are requested to see what they had to commit.
+Basically my project is on the implementation of stack using c.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SO PLEASE REVIEW YOUR COMMITS:
+
+1. Prajjwal
+Make a function named as inorder . Make a
+seperate branch named as inorder.
+
+2.Nishkarsh
+Make a function of preorder .Make a seperate
+branch named as preorder.
+
+3.Prakhar
+Make a function named as postorder. Make a seperate branch named as postorder.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+After you had committed I will merge those branches with my master branch and at last my project will be completed. So please do the above commits suggested.
+---------------------------------------------------------------------------
+Thank you
+---------------------------------------------------------------------------
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (master)
+$ vi trees.c
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (master)
+$ cd nishkarsh/
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project/nishkarsh (master)
+$ ls
+DataStructuresProject/
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project/nishkarsh (master)
+$ cd ..
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (master)
+$ ls
+contributer.txt  nishkarsh/  prakhar/  trees.c
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (master)
+$ git branch preorder
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (master)
+$ git checkout preorder
+Switched to branch 'preorder'
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (preorder)
+$ ls
+contributer.txt  nishkarsh/  prakhar/  trees.c
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (preorder)
+$ git diff
+diff --git a/trees.c b/trees.c
+index bf21c8b..4206985 100644
+--- a/trees.c
++++ b/trees.c
+@@ -40,8 +40,19 @@ void printInorder(struct node* node)
+ /* Given a binary tree, print its nodes in preorder*/
+ void printPreorder(struct node* node)
+ {
+-//nishkarsh will add here
++     if (node == NULL)
++          return;
++
++     /* first print data of node */
++     printf("%d ", node->data);
++
++     /* then recur on left sutree */
++     printPreorder(node->left);
++
++     /* now recur on right subtree */
++     printPreorder(node->right);
+ }
++
+
+ /* Driver program to test above functions*/
+ int main()
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (preorder)
+$ git commit -m "Nishkarsh Raj has added code in preorder branch,log and screenshot attached for reference purposes"
+On branch preorder
+Changes not staged for commit:
+        modified:   trees.c
+
+Untracked files:
+        trees.exe
+
+no changes added to commit
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (preorder)
+$ git add .
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (preorder)
+$ git commit -m "Nishkarsh Raj has added code in preorder branch,log and screenshot attached for reference purposes"
+[preorder 9966681] Nishkarsh Raj has added code in preorder branch,log and screenshot attached for reference purposes
+ 2 files changed, 12 insertions(+), 1 deletion(-)
+ create mode 100644 trees.exe
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (preorder)
+$ git push -u origin preorder
+fatal: HttpRequestException encountered.
+   An error occurred while sending the request.
+Username for 'https://github.com': 500060720@stu.upes.ac.in
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 41.67 KiB | 2.45 MiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Nirmaljeet/scm_project.git
+ * [new branch]      preorder -> preorder
+Branch 'preorder' set up to track remote branch 'preorder' from 'origin'.
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (preorder)
+$ git pull
+Already up to date.
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (preorder)
+$ git switch master
+git: 'switch' is not a git command. See 'git --help'.
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (preorder)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (master)
+$ git pull postorder
+fatal: 'postorder' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (master)
+$ git branch
+* master
+  preorder
+
+500060720@upes-500060720 MINGW64 /f/nirmaljeet_project/scm_project (master)
+$
